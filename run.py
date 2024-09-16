@@ -41,7 +41,7 @@ def main(test=False, league="wp2", cmds_number=0):
             print(command)
     else:
         root = tk.Tk()
-        app = CommandGeneratorGUI(root, generator)
+        app = CommandGeneratorGUI(root, generator, league)
         root.mainloop()
 
 

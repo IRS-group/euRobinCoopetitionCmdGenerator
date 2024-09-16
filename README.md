@@ -1,8 +1,22 @@
-# Instructions
+# Requirements
 
 - `pip install qrcode[pil]`
-- Execute `python generator_opt.py`
-- Follow instructions
 
-This repo is an optimized and cleanup version of the command generator provided by https://github.com/johaq/
+# Instructions
+
+```
+python3 run.py --league wp2
+```
+
+```
+python3 run.py --league wp3
+```
+
+```
+python3 run.py --league wp3 --test 500
+```
+
+# Acknowledgements
+
+This repository is an optimized, cleaned-up, and customized version of the command generator from https://github.com/johaq/, specifically designed for RoboCup.
 

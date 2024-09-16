@@ -1,0 +1,17 @@
+window_title: "euRobin Coopetition Command Generator"
+image_path: "./assets/images/euROBIN_logo _payoff_2.png"
+title_font_size: 26
+subtitle: "Nancy euRobin Coopetition"
+subtitle_font_size: 16
+font_type: "Helvetica"
+primary_base: "#00321A"
+secondary_base: "#FFBD59"
+button_title: "Generate Command"
+label_txt: "The Referee must read the following command to the robot:"
+qrcode_fill_color: "#FFBD59"
+qrcode_back_color: "#00321A"
+
+league_names:
+  wp1: "Industrial Robots League"
+  wp2: "Service Robots League"
+  wp3: "Outdoors Robots League"
