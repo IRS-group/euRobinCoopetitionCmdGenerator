@@ -1,0 +1,78 @@
+room_names:
+  - DLR Kitchen:
+    - locations:
+      - DLR dishwasher:
+        - placement_location: True
+      - DLR cabinet:
+        - placement_location: True
+      - DLR bin:
+        - placement_location: False
+  - KIT Kitchen:
+    - locations:
+      - KIT dishwasher:
+        - placement_location: True
+      - KIT cabinet:
+        - placement_location: True
+      - KIT bin:
+        - placement_location: False
+  - INRIA Kitchen:
+    - locations:
+      - INRIA dishwasher:
+        - placement_location: True
+      - INRIA cabinet:
+        - placement_location: True
+      - INRIA bin:
+        - placement_location: False
+
+
+objects:
+  - cleaning_supplies:
+    - category: cleaning_supply
+    - items:
+      - cleanser
+      - sponge
+  - dishes:
+    - category: dish
+    - items:
+      - bowl
+      - plate
+      - mug
+      - fork
+      - knife
+      - spoon
+  - food:
+    - category: food
+    - items:
+      - chocolate_jello
+      - strawberry_jello
+      - coffee_grounds
+      - mustard
+      - spam
+      - sugar
+      - tomato_soup
+      - tuna
+  - fruits:
+    - category: fruit
+    - items:
+      - apple
+      - banana
+      - lemon
+      - orange
+      - peach
+      - pear
+      - plum
+      - strawberry
+  - snacks:
+    - category: snack
+    - items:
+      - cheezit
+      - cornflakes
+      - pringles
+  - toys:
+    - category: toy
+    - items:
+      - baseball
+      - dice
+      - rubiks_cube
+      - soccer_ball
+      - tennis_ball

@@ -1,0 +1,24 @@
+room_names:
+  - Main Hall:
+    - locations:
+      - PickUp Point A:
+        - placement_location: True
+      - PickUp Point B:
+        - placement_location: True
+  - Entrance Hall:
+    - locations:
+      - PickUp Point C:
+        - placement_location: True
+      - PickUp Point D:
+        - placement_location: True
+
+
+objects:
+  - parcels:
+    - category: parcel
+    - items:
+      - parcel A1
+      - parcel A2
+      - parcel A3
+      - parcel A4
+      - parcel A5

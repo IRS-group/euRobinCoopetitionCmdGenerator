@@ -1,0 +1,21 @@
+verb_dict:
+  take: ["pick"]
+  place: ["drop"]
+  deliver: ["give"]
+
+prep_dict:
+  deliverPrep: ["to"]
+  placePrep: ["on"]
+  inLocPrep: ["in"]
+  fromLocPrep: ["from"]
+  toLocPrep: ["to"]
+  atLocPrep: ["at"]
+  talkPrep: ["to"]
+  locPrep: ["in", "at"]
+  onLocPrep: ["on"]
+  arePrep: ["are"]
+  ofPrsPrep: ["of"]
+
+connector_list: ["and"]
+
+

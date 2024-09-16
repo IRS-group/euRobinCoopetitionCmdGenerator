@@ -1,0 +1,3 @@
+# Object manipulation and perception commands
+object_cmd_list: 
+  - "takeObjFromPlcmt"
