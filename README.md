@@ -56,12 +56,17 @@ If you prefer to run this repository in a Docker container, follow the steps bel
 4. Launch the Docker container for the desired league:
     #### Service Robots League
     ```
-    ./launch_cmd_gen_wp2
+    ./launch_cmd_gen_wp2.sh
     ```
 
     #### Outdoors Robots League
     ```
-    ./launch_cmd_gen_wp3
+    ./launch_cmd_gen_wp3.sh
+    ```
+
+5. If you no longer need the Docker images, you can clean them up by running:
+    ```
+    make clean
     ```
 
 ### GUI in Docker
