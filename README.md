@@ -7,55 +7,62 @@ This repository provides a command generator tailored for the euRobin Coopetitio
 ## Requirements
 To run the project locally, make sure you have the following installed:
 
-- Tkinter: Required for the GUI.
-```
-sudo apt-get install python3-tk
-```
-- Pillow: Used for image processing.
-```
-pip install Pillow==9.5.0
-```
+1. System dependencies:
 
-- PyYAML: To handle YAML configuration files.
-```
-pip install pyyaml
-```
+    - Tkinter: Required for the GUI.
+    ```
+    sudo apt-get install python3-tk
+    ```
 
-QRCode: Generates QR codes based on the command.
-```
-pip install qrcode[pil]
-```
+2. Python dependencies: 
+    - Pillow: Used for image processing.
+    ```
+    pip install Pillow==9.5.0
+    ```
 
+    - PyYAML: To handle YAML configuration files.
+    ```
+    pip install pyyaml
+    ```
 
+    QRCode: Generates QR codes based on the command.
+    ```
+    pip install qrcode[pil]
+    ```
+
+    Alternatively, install all Python dependencies from the ```requirements.txt``` file:
+    ```
+    pip install -r requirements.txt
+    ```
 
 ## Docker
 If you prefer to run this repository in a Docker container, follow the steps below:
 
 1. Navigate to the Docker folder (assuming the project was clone to your home directory):
-```
-cd ~/euRobin-Command-Generator/docker/
-```
+    ```
+    cd ~/euRobin-Command-Generator/docker/
+    ```
 
 2. Build the Docker image using the ```Makefile```:
-```
-make build
-```
+    ```
+    make build
+    ```
 
 3. Set execution permissions for the launch scripts:
-```
-chmod +x launch_cmd_gen_wp2.sh && chmod +x launch_cmd_gen_wp3.sh
-```
+    ```
+    chmod +x launch_cmd_gen_wp2.sh && chmod +x launch_cmd_gen_wp3.sh
+    ```
 
 4. Launch the Docker container for the desired league:
-#### Service Robots League
-```
-./launch_cmd_gen_wp2
-```
+    #### Service Robots League
+    ```
+    ./launch_cmd_gen_wp2
+    ```
 
-#### Outdoors Robots League
-```
-./launch_cmd_gen_wp3
-```
+    #### Outdoors Robots League
+    ```
+    ./launch_cmd_gen_wp3
+    ```
 
 ### GUI in Docker
 Since this application uses a graphical interface, running it in Docker requires special attention to GUI rendering. This can be done by mounting the X11 socket (/tmp/.X11-unix) or by using VNC or X11 forwarding. The provided launch scripts handle X11 mounting, allowing the GUI to display on your host machine.
