@@ -1,6 +1,5 @@
 import random
 import re
-import itertools
 import warnings
 from utils.utils import *
 
