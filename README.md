@@ -31,7 +31,7 @@ pip install qrcode[pil]
 ## Docker
 If you prefer to run this repository in a Docker container, follow the steps below:
 
-1. Navigate to the Docker folder (assuming your project was clone to your home directory):
+1. Navigate to the Docker folder (assuming the project was clone to your home directory):
 ```
 cd ~/euRobin-Command-Generator/docker/
 ```
