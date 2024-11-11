@@ -1,3 +1,4 @@
 Pillow==9.5.0
 pyyaml
 qrcode[pil]
+opencv-contrib-python==4.6.0.66

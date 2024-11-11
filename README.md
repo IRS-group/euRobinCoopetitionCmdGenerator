@@ -35,6 +35,25 @@ To run the project locally, make sure you have the following installed:
     pip install -r requirements.txt
     ```
 
+## Virtual Environment
+To create and activate a virtual environment for this project:
+ ```
+virtualenv command_generator && source commmand_generator/bin/activate
+```
+
+Next, install the required dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+For instructions on running the command generator, refer to the **Running Locally** section below.
+
+When you're finished, deactivate the virtual environment with:
+```
+deactivate
+```
+
 ## Docker
 If you prefer to run this repository in a Docker container, follow the steps below:
 
