@@ -67,6 +67,10 @@ class CommandGenerator:
         # Eliminate double mentions of location
         command_string = self.eliminate_double_mentions(command_string)
 
+        # Check dishwasher 
+        if self.league == self.league_names[2]:
+            command_string = self.verify_dishwasher_constraint(command_string)
+
         return command_string.replace('{', '').replace('}', '')
 
     def get_command_string(self, command, cmd_category, difficulty):
@@ -204,3 +208,47 @@ class CommandGenerator:
             if placeholder in command_string:
                 command_string = command_string.replace(placeholder, random.choice([x for x in choices if x not in command_string]))
         return command_string
+    
+    def verify_dishwasher_constraint(self, command_string):
+        # Load objects data from YAML file
+        objects_data = read_yaml_file('./params/wp2/params.yaml')
+        
+        # Find the object in command_string that matches any item in objects_data
+        current_object = next(
+            (
+                obj 
+                for category in objects_data['objects'] 
+                for item in category.values() 
+                if isinstance(item, list)  # Ensure we are accessing the list with category info
+                for obj in item[1]['items']  # Access the items list
+                if obj in command_string
+            ), 
+            None
+        )
+
+        # Debug print to check what object was matched
+        # print("Extracted object:", current_object)
+
+        # Check if "dishwasher" is mentioned in the command
+        if "dishwasher" in command_string:
+            # Locate items under the "dishes" category
+            dish_items = next(
+                (
+                    item[1]['items'] 
+                    for category in objects_data['objects'] 
+                    for key, item in category.items() 
+                    if key == "dishes"  # Access only the dishes category
+                ), 
+                []
+            )
+            # print(dish_items)
+            # Check if the current object is in the dish category
+            if current_object not in dish_items:
+                # Replace with a random valid object from the "dishes" category
+                replacement_object = random.choice(dish_items)
+                print(f"Replacing '{current_object}' with valid dish item '{replacement_object}'.")
+
+                # Replace the invalid object in the command string
+                command_string = re.sub(r'\b' + re.escape(current_object) + r'\b', replacement_object, command_string)
+
+        return command_string 
