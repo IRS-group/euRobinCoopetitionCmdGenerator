@@ -5,13 +5,14 @@ from utils.utils import *
 
 class CommandGenerator:
 
-    def __init__(self, league_names, league, location_names, placement_location_names, room_names, object_names,
+    def __init__(self, league_names, league, location_names, placement_location_names, pick_location_names, room_names, object_names,
                  object_categories_plural, object_categories_singular, unknown_objs):
         
         self.league_names = league_names
         self.league = league
         self.location_names = location_names
         self.placement_location_names = placement_location_names
+        self.pick_location_names = pick_location_names
         self.room_names = room_names
         self.object_names = object_names
         self.object_categories_plural = object_categories_plural
@@ -76,8 +77,11 @@ class CommandGenerator:
 
     def get_command_string(self, command, cmd_category, difficulty):
         # Define command patterns
+        # command_patterns = {
+        #     "takeObjFromPlcmt": "{takeVerb} the {obj} {fromLocPrep} the {plcmtLoc} and " + self.generate_command_followup("hasObj", cmd_category, difficulty),
+        # }
         command_patterns = {
-            "takeObjFromPlcmt": "{takeVerb} the {obj} {fromLocPrep} the {plcmtLoc} and " + self.generate_command_followup("hasObj", cmd_category, difficulty),
+            "takeObjFromPlcmt": "{takeVerb} the {obj} {fromLocPrep} the {pickLoc} and " + self.generate_command_followup("hasObj", cmd_category, difficulty),
         }
         return command_patterns.get(command, "WARNING")
 
@@ -176,6 +180,7 @@ class CommandGenerator:
             # Placeholder mappings
             "connector": lambda: random.choice(self.connector_list),
             #
+            "pickLoc": lambda: random.choice(self.pick_location_names),
             "plcmtLoc": lambda: random.choice(self.placement_location_names),
             "loc": lambda: random.choice(self.location_names),
             "room": lambda: random.choice(self.room_names),

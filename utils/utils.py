@@ -18,6 +18,7 @@ def parse_room_data(data):
     room_names = []
     location_names = []
     valid_placement_locations = []
+    valid_pick_locations = []
 
     # Loop through each room in the provided data
     for room in data:
@@ -35,8 +36,11 @@ def parse_room_data(data):
             # Check for valid placement locations
             if location_info[0]['placement_location']:
                 valid_placement_locations.append(location_name)
+            # Check for valid pick locations
+            if location_info[1]['pick_location']:
+                valid_pick_locations.append(location_name)
 
-    return room_names, location_names, valid_placement_locations
+    return room_names, location_names, valid_placement_locations, valid_pick_locations
 
 
 

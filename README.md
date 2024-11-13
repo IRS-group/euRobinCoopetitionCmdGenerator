@@ -88,6 +88,11 @@ If you prefer to run this repository in a Docker container, follow the steps bel
     ./launch_cmd_gen_wp3.sh
     ```
 
+    To run it for the **drones**:
+    ```
+    ./launch_cmd_gen_wp3_drones.sh
+    ```
+
 5. If you no longer need the Docker images, you can clean them up by running:
     ```
     make clean
@@ -119,6 +124,11 @@ python3 run.py --league wp2 --unknown_objs true
 #### Outdoors Robots League
 ```
 python3 run.py --league wp3
+```
+
+To run it for the **drones**:
+```
+python run.py --league wp3 --drones true
 ```
 
 ### Test Mode

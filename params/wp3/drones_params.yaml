@@ -1,18 +1,16 @@
 room_names:
-  - Main Hall:
+  - Drone Arena:
     - locations:
       - PickUp Point A:
         - placement_location: False
         - pick_location: True
-      - Delivery Point B:
+      - Delivery Point A:
         - placement_location: True
         - pick_location: False
-  - Entrance Hall:
-    - locations:
-      - PickUp Point C:
+      - PickUp Point B:
         - placement_location: False
         - pick_location: True
-      - Delivery Point D:
+      - Delivery Point B:
         - placement_location: True
         - pick_location: False
 
