@@ -1,0 +1,43 @@
+room_names:
+  - DLR Kitchen:
+    - locations:
+      - DLR dishwasher:
+        - placement_location: True
+      - DLR cabinet:
+        - placement_location: True
+      - DLR bin:
+        - placement_location: False
+  - KIT Kitchen:
+    - locations:
+      - KIT dishwasher:
+        - placement_location: True
+      - KIT cabinet:
+        - placement_location: True
+      - KIT bin:
+        - placement_location: False
+  - INRIA Kitchen:
+    - locations:
+      - INRIA dishwasher:
+        - placement_location: True
+      - INRIA cabinet:
+        - placement_location: True
+      - INRIA bin:
+        - placement_location: False
+
+
+objects:
+  - cleaning_supplies:
+    - category: cleaning_supply
+    - items:
+      - white_cloth
+      - red_sponge
+  - dishes:
+    - category: dish
+    - items:
+      - red_bowl
+      - white_plate
+  - toys:
+    - category: toy
+    - items:
+      - red_cube
+      - blue_sphere

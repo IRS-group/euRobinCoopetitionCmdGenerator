@@ -6,7 +6,7 @@ from utils.utils import *
 class CommandGenerator:
 
     def __init__(self, league_names, league, location_names, placement_location_names, room_names, object_names,
-                 object_categories_plural, object_categories_singular):
+                 object_categories_plural, object_categories_singular, unknown_objs):
         
         self.league_names = league_names
         self.league = league
@@ -16,6 +16,7 @@ class CommandGenerator:
         self.object_names = object_names
         self.object_categories_plural = object_categories_plural
         self.object_categories_singular = object_categories_singular
+        self.using_unknown_objs = unknown_objs
 
         # Load grammar data
         if self.league == self.league_names[2]:
@@ -211,7 +212,10 @@ class CommandGenerator:
     
     def verify_dishwasher_constraint(self, command_string):
         # Load objects data from YAML file
-        objects_data = read_yaml_file('./params/wp2/params.yaml')
+        if self.using_unknown_objs:
+            objects_data = read_yaml_file('./params/wp2/unknown_params.yaml')
+        else:
+            objects_data = read_yaml_file('./params/wp2/params.yaml')
         
         # Find the object in command_string that matches any item in objects_data
         current_object = next(

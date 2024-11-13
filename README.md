@@ -78,6 +78,11 @@ If you prefer to run this repository in a Docker container, follow the steps bel
     ./launch_cmd_gen_wp2.sh
     ```
 
+    To run with the **unknown objects**:
+    ```
+    ./launch_cmd_gen_wp2_unknown_objs
+    ```
+
     #### Outdoors Robots League
     ```
     ./launch_cmd_gen_wp3.sh
@@ -104,6 +109,12 @@ To run the command generator locally, you can use the following commands:
 ```
 python3 run.py --league wp2
 ```
+
+To run with the **unknown objects**:
+```
+python3 run.py --league wp2 --unknown_objs true
+```
+
 
 #### Outdoors Robots League
 ```
