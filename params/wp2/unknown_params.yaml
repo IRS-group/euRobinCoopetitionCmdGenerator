@@ -1,3 +1,13 @@
+teams:
+  - Alter-Ego
+  - INRIA
+  - Sorbonne Université Service Robots Team
+  - DLR
+  - KIT
+  - GEPETTO
+  - SocRob@Home
+  - Voice of the Line
+  
 room_names:
   - DLR Kitchen:
     - locations:

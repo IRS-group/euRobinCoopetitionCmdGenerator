@@ -1,3 +1,9 @@
+teams:
+  - University of Seville
+  - IIT
+  - RSL
+
+
 room_names:
   - Main Hall:
     - locations:
