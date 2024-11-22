@@ -106,7 +106,7 @@ class CommandGenerator:
         if self.league == self.league_names[2]:
             followup_patterns = {
                 "placeObjOnPlcmt": "{placeVerb} it {onLocPrep} the {plcmtLoc2}",
-                "deliverObjToNameAtBeac": "{deliverVerb} it {deliverPrep} person {inLocPrep} the {room}",
+                "deliverObjToNameAtBeac": "{deliverVerb} it {deliverPrep} the person {inLocPrep} the {room}",
             }
         elif self.league == self.league_names[3]:
             followup_patterns = {
