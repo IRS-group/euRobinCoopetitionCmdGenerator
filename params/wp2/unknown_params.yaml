@@ -14,29 +14,23 @@ room_names:
       - DLR dishwasher:
         - placement_location: True
         - pick_location: True
-      - DLR cabinet:
+      - DLR counter:
         - placement_location: True
         - pick_location: True
-      - DLR table:
+      - DLR drawer:
         - placement_location: True
         - pick_location: True
-      - DLR bin:
-        - placement_location: False
-        - pick_location: False
   - KIT Kitchen:
     - locations:
       - KIT dishwasher:
         - placement_location: True
         - pick_location: True
-      - KIT cabinet:
+      - KIT counter:
         - placement_location: True
         - pick_location: True
-      - KIT table:
+      - KIT drawer:
         - placement_location: True
         - pick_location: True
-      - KIT bin:
-        - placement_location: False
-        - pick_location: False
   - INRIA Kitchen:
     - locations:
       - INRIA dishwasher:
@@ -45,12 +39,15 @@ room_names:
       - INRIA cabinet:
         - placement_location: True
         - pick_location: True
-      - INRIA table:
+      - INRIA drawer:
         - placement_location: True
         - pick_location: True
-      - INRIA bin:
-        - placement_location: False
-        - pick_location: False
+      - INRIA counter:
+        - placement_location: True
+        - pick_location: True
+      - table:
+        - placement_location: True
+        - pick_location: True
 
 
 objects:

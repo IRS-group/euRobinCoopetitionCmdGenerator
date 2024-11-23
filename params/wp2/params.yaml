@@ -14,29 +14,23 @@ room_names:
       - DLR dishwasher:
         - placement_location: True
         - pick_location: True
-      - DLR cabinet:
+      - DLR counter:
         - placement_location: True
         - pick_location: True
-      - DLR table:
+      - DLR drawer:
         - placement_location: True
         - pick_location: True
-      - DLR bin:
-        - placement_location: False
-        - pick_location: False
   - KIT Kitchen:
     - locations:
       - KIT dishwasher:
         - placement_location: True
         - pick_location: True
-      - KIT cabinet:
+      - KIT counter:
         - placement_location: True
         - pick_location: True
-      - KIT table:
+      - KIT drawer:
         - placement_location: True
         - pick_location: True
-      - KIT bin:
-        - placement_location: False
-        - pick_location: False
   - INRIA Kitchen:
     - locations:
       - INRIA dishwasher:
@@ -45,12 +39,15 @@ room_names:
       - INRIA cabinet:
         - placement_location: True
         - pick_location: True
-      - INRIA table:
+      - INRIA drawer:
         - placement_location: True
         - pick_location: True
-      - INRIA bin:
-        - placement_location: False
-        - pick_location: False
+      - INRIA counter:
+        - placement_location: True
+        - pick_location: True
+      - table:
+        - placement_location: True
+        - pick_location: True
 
 
 
@@ -58,50 +55,56 @@ objects:
   - cleaning_supplies:
     - category: cleaning_supply
     - items:
-      - cleanser
-      - sponge
+      - glass_cleanser
+      - bleach_cleanser
+      - hygiene_spray
+      - toothpaste
   - dishes:
     - category: dish
     - items:
       - bowl
       - plate
       - mug
-      - fork
-      - knife
-      - spoon
   - food:
     - category: food
     - items:
+      - cracker_box
+      - sugar
       - chocolate_jello
       - strawberry_jello
-      - coffee_grounds
-      - mustard
       - spam
-      - sugar
+      - coffee
+      - pringles
+      - mustard
       - tomato_soup
-      - tuna
+      - blue_salt
+      - yellow_salt
+      - green_salt
+      - mashed_potatoes
+      - rusk
+      - amicelli
+      - raviolli
+      - powdered_sugar
+      - nutella_go
+      - cereals
+      - chocolate_bars
   - fruits:
     - category: fruit
     - items:
-      - apple
       - banana
+      - strawberry
+      - apple
       - lemon
-      - orange
       - peach
       - pear
+      - orange
       - plum
-      - strawberry
-  - snacks:
-    - category: snack
-    - items:
-      - cheezit
-      - cornflakes
-      - pringles
   - toys:
     - category: toy
     - items:
-      - baseball
-      - dice
-      - rubiks_cube
       - soccer_ball
+      - soft_ball
+      - baseball
       - tennis_ball
+      - racquetball
+      - rubiks_cube
