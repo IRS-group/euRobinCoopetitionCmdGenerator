@@ -59,7 +59,7 @@ If you prefer to run this repository in a Docker container, follow the steps bel
 
 1. Navigate to the Docker folder (assuming the project was clone to your home directory):
     ```
-    cd ~/euRobinCommandGenerator/docker/
+    cd ~/euRobinCoopetitionCmdGenerator/docker/
     ```
 
 2. Build the Docker image using the ```Makefile```:
