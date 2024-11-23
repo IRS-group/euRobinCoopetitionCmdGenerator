@@ -59,17 +59,17 @@ If you prefer to run this repository in a Docker container, follow the steps bel
 
 1. Navigate to the Docker folder (assuming the project was clone to your home directory):
     ```
-    cd ~/euRobin-Command-Generator/docker/
+    cd ~/euRobinCommandGenerator/docker/
     ```
 
 2. Build the Docker image using the ```Makefile```:
     ```
-    make build
+    sudo make build
     ```
 
 3. Set execution permissions for the launch scripts:
     ```
-    chmod +x launch_cmd_gen_wp2.sh && chmod +x launch_cmd_gen_wp3.sh
+    sudo chmod +x launch_cmd_gen_wp2.sh && sudo chmod +x launch_cmd_gen_wp3.sh
     ```
 
 4. Launch the Docker container for the desired league:
