@@ -10,16 +10,40 @@ room_names:
       - PickUp Point A:
         - placement_location: False
         - pick_location: True
+      - Delivery Point A:
+        - placement_location: True
+        - pick_location: False
+      - PickUp Point B:
+        - placement_location: False
+        - pick_location: True
       - Delivery Point B:
         - placement_location: True
         - pick_location: False
+      - PickUp Point C:
+        - placement_location: False
+        - pick_location: True
+      - Delivery Point C:
+        - placement_location: True
+        - pick_location: False
+      - Delivery Point D:
+        - placement_location: True
+        - pick_location: False
+      - Delivery Point E:
+        - placement_location: True
+        - pick_location: False
+      - PickUp Point F:
+        - placement_location: False
+        - pick_location: True
+      - PickUp Point G:
+        - placement_location: False
+        - pick_location: True
   - Entrance Hall:
     - locations:
       - PickUp Point C:
         - placement_location: False
-        - pick_location: True
+        - pick_location: False
       - Delivery Point D:
-        - placement_location: True
+        - placement_location: False
         - pick_location: False
 
 

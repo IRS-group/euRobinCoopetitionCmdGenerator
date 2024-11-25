@@ -7,16 +7,16 @@ teams:
 room_names:
   - Drone Arena:
     - locations:
-      - PickUp Point A:
+      - PickUp Point G:
         - placement_location: False
         - pick_location: True
-      - Delivery Point A:
+      - PickUp Point F:
+        - placement_location: False
+        - pick_location: True
+      - Delivery Point E:
         - placement_location: True
         - pick_location: False
-      - PickUp Point B:
-        - placement_location: False
-        - pick_location: True
-      - Delivery Point B:
+      - Delivery Point D:
         - placement_location: True
         - pick_location: False
 
