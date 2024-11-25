@@ -51,18 +51,22 @@ room_names:
 
 
 objects:
-  - cleaning_supplies:
-    - category: cleaning_supply
-    - items:
-      - white_cloth
-      - red_sponge
   - dishes:
     - category: dish
     - items:
-      - red_bowl
-      - white_plate
+      - blue_bowl
+      - pink_mug
+      - red_mug
+      - glass
+      - blue_cup
+      - pink_cup
+      - green_cup
+      - purple_cup
+      - yellow_cup
+      - grey_plate
   - toys:
     - category: toy
     - items:
-      - red_cube
-      - blue_sphere
+      - grey_cube
+      - red_ball
+      - grey_ball
