@@ -25,8 +25,5 @@ objects:
   - parcels:
     - category: parcel
     - items:
-      - parcel A1
-      - parcel A2
       - parcel A3
       - parcel A4
-      - parcel A5
