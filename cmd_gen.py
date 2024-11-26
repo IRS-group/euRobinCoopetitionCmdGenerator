@@ -67,7 +67,12 @@ class CommandGenerator:
         command_string = self.adjust_articles(command_string)
 
         # Eliminate double mentions of location
-        command_string = self.eliminate_double_mentions(command_string)
+        if self.league == self.league_names[2]:
+            #TODO remove this later
+            # Only used for Task 2 and 3
+            command_string = self.eliminate_double_mentions_wp2(command_string)
+        else:
+            command_string = self.eliminate_double_mentions(command_string)
 
         # Check dishwasher 
         if self.league == self.league_names[2]:
@@ -214,6 +219,55 @@ class CommandGenerator:
             if placeholder in command_string:
                 command_string = command_string.replace(placeholder, random.choice([x for x in choices if x not in command_string]))
         return command_string
+    
+
+
+    def eliminate_double_mentions_wp2(self, command_string):
+        """Ensure pick and place locations are in different kitchens."""
+        # Helper function to extract the kitchen identifier
+        def extract_kitchen_identifier(location):
+            return location.split()[0]  # Assumes the first word is the kitchen name (e.g., "INRIA")
+
+        # All kitchen identifiers
+        all_kitchens = {"DLR", "KIT", "INRIA"}
+
+        # Identify pick and place phrases in the command
+        pick_mention = re.search(r'\b(?:DLR|KIT|INRIA)\b \w+', command_string)
+        place_mention = re.search(r'\b(?:DLR|KIT|INRIA)\b \w+', command_string[pick_mention.end():] if pick_mention else "")
+
+        # Extract current kitchen identifiers
+        pick_kitchen = extract_kitchen_identifier(pick_mention.group()) if pick_mention else None
+        place_kitchen = extract_kitchen_identifier(place_mention.group()) if place_mention else None
+
+        # Ensure pick and place kitchens are different
+        if pick_kitchen and place_kitchen and pick_kitchen == place_kitchen:
+            # Choose a new kitchen for the place mention
+            remaining_kitchens = list(all_kitchens - {pick_kitchen})
+            new_kitchen = random.choice(remaining_kitchens)
+
+            # Replace the place mention with a valid kitchen
+            updated_place = place_mention.group().replace(place_kitchen, new_kitchen, 1)
+            command_string = command_string.replace(place_mention.group(), updated_place, 1)
+
+        # Ensure unique replacements for placeholders
+        placeholder_choices = {
+            "loc2": self.location_names,
+            "room2": self.room_names,
+            "plcmtLoc2": self.placement_location_names,
+        }
+
+        for placeholder, choices in placeholder_choices.items():
+            if placeholder in command_string:
+                # Replace with valid options ensuring unique kitchens
+                valid_choices = [loc for loc in choices if extract_kitchen_identifier(loc) not in {pick_kitchen, place_kitchen}]
+                replacement = random.choice(valid_choices) if valid_choices else random.choice(choices)
+                command_string = command_string.replace(placeholder, replacement, 1)
+
+        return command_string
+
+
+
+
     
     def verify_dishwasher_constraint(self, command_string):
         # Load objects data from YAML file
